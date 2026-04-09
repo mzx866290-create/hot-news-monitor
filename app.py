@@ -46,6 +46,9 @@ def fetch_ai_news():
         ('品玩', 'https://www.pingwest.com'),
         ('Solidot', 'https://www.solidot.org'),
         ('新智元', 'https://yuanzibo.com'),
+        ('Hacker News', 'https://news.ycombinator.com'),
+        ('DEV Community', 'https://dev.to'),
+        ('Product Hunt', 'https://producthunt.com'),
     ]
 
     AI_KEYWORDS = [
@@ -107,7 +110,7 @@ def fetch_ai_news():
                 source_items[name] = items
 
     # Interleave from all sources: take up to 3 from each source, then fill remaining
-    MAX_PER_SOURCE = 3
+    MAX_PER_SOURCE = 2
     result = []
     for name, _ in AI_SOURCES:
         if name in source_items:
